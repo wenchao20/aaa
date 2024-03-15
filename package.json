@@ -6,6 +6,8 @@
         "build": "vite build"
     },
     "dependencies": {
+        "tcplayer": "^0.0.30",
+        "tcplayer.js": "^5.1.0",
         "vue": "^3.0.5"
     },
     "devDependencies": {
@@ -16,5 +18,4 @@
         "vite": "^2.0.0-beta.12"
     },
     "license": "MIT"
-
 }

@@ -22,11 +22,13 @@
       @endCallback="endCallback"
     ></num-game>
   </div>
-
+  
   <div class="todos">
     <div class="start" @click="start">开始游戏</div>
     <div class="chengjiu" @click="chen_jiu" v-if=is_show>成就</div>
   </div>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" > <source src="https://wenchao20-1311961370.cos.ap-nanjing.myqcloud.com/%E6%B5%AA%E5%AE%A2%E5%89%91%E5%BF%83%20%E6%9C%80%E7%BB%88%E7%AB%A0%20%E8%BF%BD%E5%BF%86%E7%AF%87.1080p.BD%E4%B8%AD%E5%AD%97%5B66%E5%BD%B1%E8%A7%86www.66Ys.Co%5D.mp4" type="video/mp4" /> </video>
+
   
 </template>
 
@@ -41,7 +43,9 @@ import img5 from "./assets/images/5.png";
 import img6 from "./assets/images/6.png";
 import img7 from "./assets/images/7.png";
 import img8 from "./assets/images/8.png";
-
+import tcp from "tcplayer.js"
+console.log(tcp)
+const playerElement = ref(null); // 播放器容器的引用
 export default {
   components: {
     NumGame,
@@ -93,7 +97,6 @@ export default {
     onMounted(() => {
       is_show.value=document.cookie
       console.log(is_show)
-     
     });
     return {
       changeModel,
